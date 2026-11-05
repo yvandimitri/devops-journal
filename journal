@@ -1,0 +1,16 @@
+# Journal de bord — Semaine 1
+
+## Clé SSH
+- `ssh-keygen -t ed25519 -C "mon-email@gmail.com"` : génère une paire de clés SSH pour authentifier la machine auprès de GitHub.
+- `cat ~/.ssh/id_ed25519.pub` : affiche la clé publique pour la copier dans GitHub.
+- `ssh -T git@github.com` : teste que GitHub reconnaît bien ma clé.
+
+## Git
+
+- `git clone git@github.com:USERNAME/devops-journal.git` : copie le dépôt GitHub sur la machine en gardant le lien.
+- `git status` : montre l'état du dépôt et les fichiers modifiés.
+
+## Navigation Linux
+- `cd ~` : va dans mon dossier personnel.
+- `ls` : liste le contenu du dossier courant.
+- `exit` : ferme la session.
