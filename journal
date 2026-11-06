@@ -14,3 +14,7 @@
 - `cd ~` : va dans mon dossier personnel.
 - `ls` : liste le contenu du dossier courant.
 - `exit` : ferme la session.
+
+sudo addgroup equipe  : pour cree le groupe equipe
+sudo adduser -m -s /bin/bash amina : pour cree l'utilisateur amina
+sudo usermod -aG equipe amina pour mettre l'utilisateur amina dans le groupe equipe
