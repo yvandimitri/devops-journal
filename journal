@@ -18,3 +18,16 @@
 sudo addgroup equipe  : pour cree le groupe equipe
 sudo adduser -m -s /bin/bash amina : pour cree l'utilisateur amina
 sudo usermod -aG equipe amina pour mettre l'utilisateur amina dans le groupe equipe
+
+sudo tail /var/log/mboamarket/app.log affiche les derniers evenement du journal
+sudo grep -i error /mboamarket/app.log filtre et affiche les ligne ou apparait error
+sudo grep -i upload                     filtre les ligne lié a l'upload des photo
+
+Resultat : On remarque 4 ECHECS des commande 1042 a 1045
+
+ls -ld /srv/mboamarket/uploads/   cette commande nous montre les droit du dossier
+
+resultat : le dossier appartient a root et seule roou pouvait y ecrire. donc mauvais proprietaire selon l'enoncé.
+
+sudo chown mboa:mboa /srv/mboamarket/uploads : pour donner le dossier a l'application
+sudo chmod 755 /srv/mboamarket/uploads : pour donner les droit a mboa 
